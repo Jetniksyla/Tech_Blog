@@ -4,7 +4,6 @@ const seedComment = require(`./seedComment`);
 
 // Inserts seed entries in the table `users`
 
-
 const seedUsers = require('./user-seeds');
 const seedBlogs = require('./blog-seeds');
 const seedComments = require('./comment-seeds');
