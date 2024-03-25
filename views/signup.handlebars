@@ -1,20 +1,37 @@
+<!-- Signup Form -->
 <section class="card text-center">
-      <div class="card-body">
-        <h3 class="card-title">Signup</h3>
-        <form id="signup">
-            <div class="card-text">
-            <label for="signupUsername">Username</label>
-            <input type="text" placeholder="username" id="signupUsername">
-            </div>
-            <div class="card-text">
-            <label for="signupPassword">Password</label>
-            <input type="text" placeholder="password" id="signupPassword">
-            </div>
-            <button>Signup!</button><br>
-            <a href="/login">Login instead</a>
-        </form>
-    </div>
+  <div class="card-body">
+    <!-- Title of the card -->
+    <h3 class="card-title">Sign-Up</h3>
+    <!-- Form for signup -->
+    <form id="signup">
+      <!-- First Name input field -->
+      <div class="card-text">
+        <label for="signupFirstName">First Name</label>
+        <input type="text" placeholder="first name" id="signupFirstName" />
+      </div>
+      <!-- Last Name input field -->
+      <div class="card-text">
+        <label for="signupLastName">Last Name</label>
+        <input type="text" placeholder="last name" id="signupLastName" />
+      </div>
+      <!-- Username input field -->
+      <div class="card-text">
+        <label for="signupUsername">Username</label>
+        <input type="text" placeholder="username" id="signupUsername" />
+      </div>
+      <!-- Password input field -->
+      <div class="card-text">
+        <label for="signupPassword">Password</label>
+        <input type="text" placeholder="password" id="signupPassword" />
+      </div>
+      <!-- Signup button -->
+      <button>Sign-Up!</button><br />
+      <!-- Link to the login page -->
+      <a href="/login">Login</a>
+    </form>
+  </div>
 </section>
 
-
+<!-- Script for signup functionality -->
 <script src="/js/signup.js"></script>

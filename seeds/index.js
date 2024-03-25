@@ -1,19 +1,17 @@
-const seedUser = require("./seedUser");
-const seedBlog = require("./seedBlog");
-const seedComment = require(`./seedComment`);
+// Importing seed functions for users, blogs, and comments
+const seedUsers = require("./seedUser");      // Importing seed function for users
+const seedBlogs = require("./seedBlog");      // Importing seed function for blogs
+const seedComments = require("./seedComment"); // Importing seed function for comments
 
-// Inserts seed entries in the table `users`
-
-const seedUsers = require('./user-seeds');
-const seedBlogs = require('./blog-seeds');
-const seedComments = require('./comment-seeds');
-
+// Function to seed all data
 const seedAll = async () => {
-    await seedUsers();
-    await seedBlogs();
-    await seedComments();
-    console.log('All seed data inserted successfully!');
-    process.exit(0);
+  // Call each seed function sequentially
+  await seedUsers();      // Seed users
+  await seedBlogs();      // Seed blogs
+  await seedComments();   // Seed comments
+  console.log("All seed data inserted successfully!"); // Log success message
+  process.exit(0);        // Exit process
 };
 
+// Call seedAll function to start seeding process
 seedAll();

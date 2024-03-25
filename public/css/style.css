@@ -6,13 +6,13 @@
 
 body {
   height: 100vh;
-  background-color: rgb(212 221 201) !important;
+  background-color: rgb(223, 227, 217) !important;
 }
 
 header,
 h1 {
   background-color: #3a4039;
-  padding: 10px;
+  padding: 15px 35px;
   color: #f6faf5 !important;
 }
 
@@ -23,20 +23,20 @@ header a {
 }
 
 .card-body {
-  padding: 2.25rem;
-  border: 5px solid #8c8cc4;
-  margin: 14px;
-  background-color: rgb(193 203 187);
+background: rgb(132, 118, 118);
 }
 
 .card-title {
-  background-color: #3a4039;
+  background-color: #565a55;
   color: #f6faf5;
-  padding: 5px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .card {
-  background-color: rgb(193 203 187);
+  background-color: rgb(156, 160, 151);
+  margin: 30px;
+  padding: 10px;
 }
 
 .card h5,
@@ -46,8 +46,9 @@ header a {
 }
 
 button {
-  padding: 3px;
-  margin: 5px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
 }
 
 #newpost {
@@ -60,6 +61,8 @@ button {
 #editedContent {
   margin-left: 10vw;
   margin-right: 10vw;
+  padding: 7px 7px;
+  border-radius: 5px;
 }
 
 #create,
@@ -73,9 +76,12 @@ button {
 #comment {
   width: 80vw;
   margin-top: 20px;
+  padding: 7px 7px;
 }
 
 #title,
 #editedTitle {
   width: 80vw;
+  padding: 7px 7px;
+  border-radius: 5px;
 }

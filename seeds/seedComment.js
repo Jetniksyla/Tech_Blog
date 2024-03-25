@@ -1,8 +1,8 @@
-// Comment seeds
+// Importing required modules
+const sequelize = require("../config/connection"); // Importing the Sequelize connection
+const { Comment } = require("../models");          // Importing the Comment model
 
-const sequelize = require("../config/connection");
-const { Comment } = require("../models");
-
+// Array of comment data to be seeded
 const comments = [
   {
     body: "Amazing!",
@@ -26,13 +26,15 @@ const comments = [
   },
 ];
 
+// Function to seed comments into the database
 const seedComments = async () => {
   try {
-    await Comment.bulkCreate(comments);
-    console.log("Comments seeded successfully!");
+    await Comment.bulkCreate(comments); // Bulk create comments in the database
+    console.log("Comments seeded successfully!"); // Log success message
   } catch (err) {
-    console.error("Error seeding comments:", err);
+    console.error("Error seeding comments:", err); // Log error message if seeding fails
   }
 };
 
+// Export the seedComments function
 module.exports = seedComments;

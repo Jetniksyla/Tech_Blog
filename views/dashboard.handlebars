@@ -1,32 +1,46 @@
+<!-- Dashboard Page Template -->
 <h1>Dashboard</h1>
+<!-- Section for displaying existing blogs -->
 <section id="existingblogs">
-{{#each blogs}}
+  <!-- Iterate over each blog and display its information -->
+  {{#each blogs}}
   <section class="card">
+      <!-- Link to view the full blog -->
       <a href="/blogs/{{id}}" class="card-body">
+        <!-- Blog title -->
         <h3 class="card-title">{{title}}</h3> 
+        <!-- Blog creation date -->
         <h5>Posted on {{createdAt}}</h5>
+        <!-- Blog content -->
         <p class="card-text">{{content}}</p>
     </a>
   </section>
-{{/each}}
+  {{/each}}
 </section>
+<!-- Section for creating a new blog -->
 <section id="createNew" class="card text-center">
   <div class="card-body">
-  <h3 class="card-title">Create New Post</h3>
-  <form id="newBlog">
-    <div class="card-text"></div>
-      <label for="title">Title</label><br>
-      <input type="text" id="title" placeholder="title">
-    </div>
-    <div class="card-text"></div>
-      <label for="content">Content</label>
-    <textarea id="content" placeholder="content"></textarea>
-    </div>
-    <button id="create">Create</button>
-</form>
-</div>
+    <!-- Form for creating a new blog -->
+    <h3 class="card-title">Create New Post</h3>
+    <form id="newBlog">
+      <div class="card-text"></div>
+        <!-- Input field for the title -->
+        <label for="title">Title</label><br>
+        <input type="text" id="title" placeholder="title">
+      </div>
+      <div class="card-text"></div>
+        <!-- Textarea for entering the content -->
+        <label for="content">Content</label>
+        <textarea id="content" placeholder="content"></textarea>
+      </div>
+      <!-- Button to create the new blog -->
+      <button id="create">Create</button>
+    </form>
+  </div>
 </section>
+<!-- Form to navigate to the new post creation -->
 <form id="newpost">
     <button>New Post</button>
 </form>
+<!-- Include dashboard JavaScript file -->
 <script src="/js/dashboard.js"></script>

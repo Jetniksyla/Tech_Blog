@@ -1,32 +1,44 @@
-
+<!-- Dashboard Update/Delete Page Template -->
 <h1>Dashboard</h1>
+<!-- Section for displaying the current blog to be updated -->
 <section id="currentBlogUpdate">
   <section class="card">
-      <div class="card-body">
-        <h3 class="card-title">{{hbsBlog.title}}</h3> 
-        <h5>Posted on {{hbsBlog.createdAt}}</h5>
-        <p class="card-text">{{hbsBlog.content}}</p>
+    <div class="card-body">
+      <!-- Display the title of the current blog -->
+      <h3 class="card-title">{{hbsBlog.title}}</h3> 
+      <!-- Display the creation date of the current blog -->
+      <h5>Posted on {{hbsBlog.createdAt}}</h5>
+      <!-- Display the content of the current blog -->
+      <p class="card-text">{{hbsBlog.content}}</p>
     </div>
   </section>
 </section>
 
+<!-- Section for editing the current blog -->
 <section id="editBlog" class="card text-center">
   <div class="card-body">
-  <h3 class="card-title">Edit Post</h3>
-  <form id="editedBlog">
-    <div class="card-text"></div>
-      <label for="editedTitle">Title</label><br>
-      <input type="text" id="editedTitle" placeholder="{{hbsBlog.title}}" value="{{hbsBlog.title}}">
-    </div>
-    <div class="card-text"></div>
-      <label for="editedContent">Content</label>
-    <textarea id="editedContent">{{hbsBlog.content}}</textarea>
-    <input id="hiddenBlogId" hidden="true" value="{{hbsBlog.id}}"></input>
-    </div>
-    <button id="update">Update Post</button>
-    <button id="delete">Delete Post</button>
-</form>
-</div>
+    <!-- Form for editing the current blog -->
+    <h3 class="card-title">Edit Post</h3>
+    <form id="editedBlog">
+      <div class="card-text"></div>
+        <!-- Input field for editing the title -->
+        <label for="editedTitle">Title</label><br>
+        <input type="text" id="editedTitle" placeholder="{{hbsBlog.title}}" value="{{hbsBlog.title}}">
+      </div>
+      <div class="card-text"></div>
+        <!-- Textarea for editing the content -->
+        <label for="editedContent">Content</label>
+        <textarea id="editedContent">{{hbsBlog.content}}</textarea>
+        <!-- Hidden input field to store the blog ID -->
+        <input id="hiddenBlogId" hidden="true" value="{{hbsBlog.id}}"></input>
+      </div>
+      <!-- Button to update the current blog -->
+      <button id="update">Update Post</button>
+      <!-- Button to delete the current blog -->
+      <button id="delete">Delete Post</button>
+    </form>
+  </div>
 </section>
 
+<!-- Include delete/update JavaScript file -->
 <script src="/js/deleteupdate.js"></script>

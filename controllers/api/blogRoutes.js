@@ -6,7 +6,9 @@ const withAuth = require("../../utilis/auth");
 // Get all blogs
 router.get("/", async (req, res) => {
   try {
+    // Fetch all blogs from the database, including associated user and comments
     const blogData = await Blog.findAll({ include: [User, Comment] });
+
     // Sending the blog data as a response
     if (!blogData) {
       res.status(404).json({ message: "No blog found!" });
@@ -19,8 +21,9 @@ router.get("/", async (req, res) => {
 });
 
 // Get single blog created by userID
-router.get("/:id", withAuth, async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
+    // Find a single blog post by its ID, including associated user and comments
     const userId = await Blog.findByPk(req.params.id, {
       include: [User, Comment],
     });
@@ -34,7 +37,7 @@ router.get("/:id", withAuth, async (req, res) => {
 });
 
 // Create new blog
-router.post("/", withAuth, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     // Check if the user is logged in
     if (!req.session.user) {
@@ -60,7 +63,7 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 // Update a blog post
-router.put("/:id", withAuth, async (req, res) => {
+router.put("/:id",  async (req, res) => {
   try {
     // Check if the user is logged in
     if (!req.session.user) {
@@ -85,12 +88,13 @@ router.put("/:id", withAuth, async (req, res) => {
 });
 
 // Delete a blog post
-router.delete("/:id", withAuth, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
     // Check if the user is logged in
     if (!req.session.user) {
       return res.status(401).json({ msg: "Please login!" });
     }
+    // Delete the blog post with the specified ID
     const deletedBlog = await Blog.destroy({
       where: {
         id: req.params.id,
@@ -104,4 +108,4 @@ router.delete("/:id", withAuth, async (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports =  router;

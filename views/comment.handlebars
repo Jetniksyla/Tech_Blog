@@ -1,32 +1,44 @@
+<!-- Blog Page Template -->
 <h1>The Tech Blog</h1>
 <section id="currentBlogComment">
+  <!-- Display current blog information -->
   <section class="card">
-      <div class="card-body">
-        <h3 class="card-title">{{hbsBlog.title}}</h3> 
-        <h5>Written by {{hbsBlog.user.username}} on {{hbsBlog.createdAt}}</h5>
-        <p class="card-text">{{hbsBlog.content}}</p>
+    <div class="card-body">
+      <!-- Blog title -->
+      <h3 class="card-title">{{hbsBlog.title}}</h3> 
+      <!-- Blog author and creation date -->
+      <h5>Written by {{hbsBlog.user.username}} on {{hbsBlog.createdAt}}</h5>
+      <!-- Blog content -->
+      <p class="card-text">{{hbsBlog.content}}</p>
     </div>
   </section>
-{{#each hbsBlog.comments}}
+  <!-- Display comments for the current blog -->
+  {{#each hbsBlog.comments}}
   <section class="card">
     <div class="card-body">
       <p>Comment</p>
+      <!-- Comment body -->
       <p class="card-text">{{body}}</p>
     </div>
   </section>
-{{/each}}
+  {{/each}}
 </section>
+<!-- Section for adding a new comment -->
 <section class="card text-center">
-<div class="card-body">
-  <h3 class="card-title">Comment</h3>
-  <form id="newComment">
-    <div class="card-text"></div>
+  <div class="card-body">
+    <!-- Form for submitting a new comment -->
+    <h3 class="card-title">Comment</h3>
+    <form id="newComment">
+      <!-- Hidden input to store the blog ID -->
       <input id="hiddenCommentId" hidden="true" value="{{hbsBlog.id}}"></input>
+      <!-- Textarea for entering the comment -->
       <textarea id="comment" placeholder="Type your comment here..."></textarea>
     </div>
+    <!-- Submit button for the comment form -->
     <button id="create">Submit</button>
-</form>
-</div>
+    </form>
+  </div>
 </section>
 
+<!-- Include comment JavaScript file -->
 <script src="/js/comment.js"></script>

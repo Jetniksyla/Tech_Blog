@@ -1,22 +1,20 @@
 const express = require("express");
 const router = express.Router();
 
-// Require controller modules.
-
 const blogRoutes = require("./api/blogRoutes");
 router.use("/api/blogs", blogRoutes);
 
 const commentRoutes = require("./api/commentRoutes");
 router.use("/api/comments", commentRoutes);
 
-const userRouter = require("./api/userRoutes");
-router.use("./api/users", userRouter);
+const userRoutes = require("./api/userRoutes.js");
+router.use("/api/users", userRoutes);
 
 const frontEnd = require("./frontendRoutes");
 router.use("/", frontEnd);
 
-// GET default route to the home page
-
-router.get("/*", req, (res) => {
-  res.json(req.session);
+router.get("/showsessions", (req, res) => {
+res.json(req.session);
 });
+
+module.exports = router;

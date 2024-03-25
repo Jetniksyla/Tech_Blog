@@ -1,11 +1,16 @@
-
+<!-- Dashboard Template -->
 <h1></h1>
-  <section class="card">
-      <a href="/blogs/{{hid}}" class="card-body">
+<section class="card">
+    <!-- Link to individual blog pages -->
+    <a href="/blogs/{{hid}}" class="card-body">
+        <!-- Blog title -->
         <h3 class="card-title">{{title}}</h3> 
+        <!-- Blog creator and creation date -->
         <h4>Created by {{user.username}} on {{createdAt}}</h4>
+        <!-- Blog content -->
         <p class="card-text">{{content}}</p>
     </a>
-  </section>
+</section>
 
+<!-- Include dashboard JavaScript file -->
 <script src="/js/dashboard.js"></script>
