@@ -10,6 +10,7 @@ let sequelize;
 if (process.env.JAWSDB_URL) {
   // Create Sequelize instance using JAWSDB_URL for database connection
   sequelize = new Sequelize(process.env.JAWSDB_URL);
+  
 } else {
   // Create Sequelize instance using local database credentials
   sequelize = new Sequelize(
