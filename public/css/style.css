@@ -12,25 +12,42 @@ body {
 header,
 h1 {
   background-color: #3a4039;
-  padding: 15px 35px;
+  padding: 25px 35px;
   color: #f6faf5 !important;
+
 }
 
 header a {
   margin: 10px;
   padding: 5px;
   color: #f6faf5 !important;
+  font-size: 25px;
 }
 
 .card-body {
-background: rgb(132, 118, 118);
+  background: rgb(132, 118, 118);
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-title {
-  background-color: #565a55;
-  color: #f6faf5;
-  padding: 10px;
-  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #3a4039;
+  padding: 13px;
+  border-radius: 11px;
+  color: aliceblue;
+}
+
+.card-title span {
+  width: auto;
+  font-size: 20px;
+  white-space: nowrap;
 }
 
 .card {
@@ -43,6 +60,8 @@ background: rgb(132, 118, 118);
 .card p {
   color: rgb(46, 49, 51) !important;
   font-style: normal;
+  padding: 8px;
+  font-size: 20px;
 }
 
 button {
@@ -61,7 +80,8 @@ button {
 #editedContent {
   margin-left: 10vw;
   margin-right: 10vw;
-  padding: 7px 7px;
+  padding: 20px;
+  font-size: 25px;
   border-radius: 5px;
 }
 
@@ -74,14 +94,63 @@ button {
 }
 
 #comment {
-  width: 80vw;
-  margin-top: 20px;
-  padding: 7px 7px;
+  width: 80%;
+  border-radius: 5px;
+  padding: 25px;
+  font-size: 25px;
 }
 
 #title,
 #editedTitle {
-  width: 80vw;
-  padding: 7px 7px;
+  width: 80%;
   border-radius: 5px;
+  padding: 25px;
+  font-size: 25px;
+}
+.card-title span {
+  justify-content: center;
+}
+
+.card-title {
+  margin-bottom: 20px;
+  font-size: 55px;
+  display: flex;
+}
+.card h2 {
+  justify-content: center;
+}
+
+.card-text {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.lable-lable {
+  font-size: 30px;
+}
+
+.card-text label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.card-text input {
+  width: 25%;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #304052;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
 }

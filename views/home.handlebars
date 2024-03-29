@@ -7,9 +7,9 @@
     <!-- Link to view the full blog -->
     <a href="/blogs/{{id}}" class="card-body">
       <!-- Display the title of the blog -->
-      <h3 class="card-title">{{title}}</h3>
+      <h3 class="card-title">{{title}} <span>Posted by {{user.username}} on {{createdAt}}</span></h3>
       <!-- Display the username of the user who posted the blog and the timestamp of creation -->
-      <h5>Posted by {{user.username}} on {{createdAt}}</h5>
+      {{!-- <h5>Posted by {{user.username}} on {{createdAt}}</h5> --}}
       <!-- Display the content of the blog -->
       <p class="card-text">{{content}}</p>
     </a>
