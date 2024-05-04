@@ -8,6 +8,7 @@
 - [Database Setup](#database-setup)
 - [Starting the Server](#starting-the-server)
 - [Contributing](#contributing)
+- [Deployment](#deployment)
 - [License](#license)
 - [Contact](#contact)
 
@@ -54,6 +55,10 @@ npm start
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to submit a pull request.
+
+## Deployment
+
+This application is deployed on Heroku. You can access it [here](https://jetnik-tech-blog-bdfa991fa64b.herokuapp.com/login).
 
 ## License
 
